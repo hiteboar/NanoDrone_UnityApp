@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+    package="com.yourcompany.yourapp"
+    android:installLocation="auto">
+
+  <!-- SDK versions -->
+  <uses-sdk
+      android:minSdkVersion="19"
+      android:targetSdkVersion="33" />
+
+  <!-- Permisos Bluetooth y localización -->
+  <uses-permission android:name="android.permission.BLUETOOTH" />
+  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="neverForLocation" />
+  <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+  <application
+      android:icon="@mipmap/app_icon"
+      tools:replace="android:icon"
+      android:label="@string/app_name"
+      android:roundIcon="@mipmap/app_icon"
+      android:theme="@style/UnityThemeSelector">
+
+    <!-- Actividad principal de Unity -->
+    <activity
+        android:name="com.unity3d.player.UnityPlayerActivity"
+        android:label="@string/app_name"
+        android:theme="@style/UnityThemeSelector"
+        android:screenOrientation="landscape"
+        android:launchMode="singleTask"
+        android:exported="true">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+
+  </application>
+</manifest>
