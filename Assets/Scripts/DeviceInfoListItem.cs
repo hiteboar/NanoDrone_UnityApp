@@ -15,9 +15,6 @@ public class DeviceInfoListItem : MonoBehaviour
     {
         mDeviceAddressText.text = aDeviceAddress;
         mDeviceNameText.text = aDeviceName;
-
-        Debug.Log("Init device in list: " + aDeviceName + " -- " + aDeviceAddress);
-
         mDeviceName = aDeviceName;
         mDeviceAddress = aDeviceAddress;
     }
